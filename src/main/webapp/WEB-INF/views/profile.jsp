@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,7 +17,7 @@
 	<style>
 	
 		html, body{ height:auto; width:100%; height:100%; background:#182a3f; scroll-behavior:smooth;}
-		*{ margin:0; padding:0; letter-spacing: 2px; z-index:20000; font-family: 'Gaegu', cursive; box-sizing: border-box; vertical-align:middle; transition: all 0.2s;} /*약식초기화*/
+		*{ margin:0; padding:0; letter-spacing: 2px; z-index:20000; font-family: 'Gaegu', cursive; box-sizing: border-box; vertical-align:middle; transition: all 0.2s;} /*ì½ìì´ê¸°í*/
 		
 		p{ padding:10px; } 
 		
@@ -310,9 +313,9 @@
 	    <div class="menu">
 	        <span class="btn btn-close">&times;</span>
 	        <ul>
-	            <li><a href="#personal">인적 사항</a></li>
-	            <li><a href="#career">경력</a></lis>
-	            <li><a href="#education">교육</a></li>
+	            <li><a href="#personal">ì¸ì  ì¬í­</a></li>
+	            <li><a href="#career">ê²½ë ¥</a></lis>
+	            <li><a href="#education">êµì¡</a></li>
 	            <li><a href="#skill">Skill Inventory</a></li>
 	        </ul>
     	</div>
@@ -320,35 +323,35 @@
 	<div class="services-section" id ="personal">
 		<div class="inner-width">
 			<div class="personal">
-				<ul>인적 사항</ul>
+				<ul>ì¸ì  ì¬í­</ul>
 				<div class="border"></div>
 				<div class="services-container1">
 					<table>
 						<tr>
-							<td>성명</td>
-							<td>함동균</td>
-							<td>생년월일</td>						
+							<td>ì±ëª</td>
+							<td>í¨ëê· </td>
+							<td>ìëìì¼</td>						
 							<td>1994.08.15</td>
-							<td>남</td>
+							<td>ë¨</td>
 						</tr>
 						<tr>
-							<td>주소</td>
-							<td>경기도 수원시 팔달구 창룡대로 42</td>
+							<td>ì£¼ì</td>
+							<td>ê²½ê¸°ë ììì íë¬êµ¬ ì°½ë£¡ëë¡ 42</td>
 						</tr>
 						<tr>
-							<td>소속회사</td>
-							<td>시큐어비즈(주)</td>
-							<td>입사일</td>
+							<td>ììíì¬</td>
+							<td>ìíì´ë¹ì¦(ì£¼)</td>
+							<td>ìì¬ì¼</td>
 							<td>2019.04.22</td>
 						</tr>
 						<tr>
-							<td>부서</td>
-							<td>개발사업부</td>
-							<td>직위</td>
-							<td>사원</td>
-							<td>병적</td>
-							<td>면제</td>
-							<td>역종</td>
+							<td>ë¶ì</td>
+							<td>ê°ë°ì¬ìë¶</td>
+							<td>ì§ì</td>
+							<td>ì¬ì</td>
+							<td>ë³ì </td>
+							<td>ë©´ì </td>
+							<td>ì­ì¢</td>
 							<td></td>
 						</tr>
 					</table>
@@ -359,45 +362,45 @@
 	
 	<div class="services-section" id ="career">
 		<div class="inner-width">
-				<ul>경력</ul>
+				<ul>ê²½ë ¥</ul>
 				<div class="border"></div>
 				<div class="services-container2">
 					<table>
 						<tr>
-							<td>회사명</td>
-							<td>기간</td>
-							<td>직위</td>						
-							<td>담당업무</td>
+							<td>íì¬ëª</td>
+							<td>ê¸°ê°</td>
+							<td>ì§ì</td>						
+							<td>ë´ë¹ìë¬´</td>
 						</tr>
 						<tr>
 							<td>Bjworld</td>
 							<td>2018.04.17~2018.08.31</td>
-							<td>근로장학생</td>
-							<td>웹 유지, 보수, 관리, 퍼블리싱</td>
+							<td>ê·¼ë¡ì¥íì</td>
+							<td>ì¹ ì ì§, ë³´ì, ê´ë¦¬, í¼ë¸ë¦¬ì±</td>
 						</tr>
 						<tr>
 							<td>SGA</td>
 							<td>2019.02.01~2019.02.28</td>
-							<td>인턴</td>
-							<td>블록체인 웹 개발, 발표</td>
+							<td>ì¸í´</td>
+							<td>ë¸ë¡ì²´ì¸ ì¹ ê°ë°, ë°í</td>
 						</tr>
 						<tr>
-							<td>임픽스</td>
+							<td>ìí½ì¤</td>
 							<td>2019</td>
-							<td>주임</td>
-							<td>제낙스와이어</td>
+							<td>ì£¼ì</td>
+							<td>ì ëì¤ìì´ì´</td>
 						</tr>
 						<tr>
-							<td>임픽스</td>
+							<td>ìí½ì¤</td>
 							<td>2019</td>
-							<td>주임</td>
-							<td>One way platform(한국기능공사)</td>
+							<td>ì£¼ì</td>
+							<td>One way platform(íêµ­ê¸°ë¥ê³µì¬)</td>
 						</tr>
 						<tr>
-							<td>한국동서발전</td>
+							<td>íêµ­ëìë°ì </td>
 							<td>2019~2020</td>
-							<td>대리</td>
-							<td>모바일스마트오피스 앱, 재난안전 관리자 웹 관리</td>
+							<td>ëë¦¬</td>
+							<td>ëª¨ë°ì¼ì¤ë§í¸ì¤í¼ì¤ ì±, ì¬ëìì  ê´ë¦¬ì ì¹ ê´ë¦¬</td>
 						</tr>
 					</table>
 				</div>
@@ -406,18 +409,18 @@
 		
 	<div class="services-section" id = "education">
 		<div class="inner-width">
-				<ul>교육</ul>
+				<ul>êµì¡</ul>
 				<div class="border"></div>
 				<div class="services-container3">
 				<table>
 						<tr>
-							<td>교육명</td>
-							<td>시작일</td>
-							<td>종료일</td>
-							<td>교육기관</td>
+							<td>êµì¡ëª</td>
+							<td>ììì¼</td>
+							<td>ì¢ë£ì¼</td>
+							<td>êµì¡ê¸°ê´</td>
 						</tr>
 						<tr>
-							<td>블록체인 스페셜리스트 양성과정</td>
+							<td>ë¸ë¡ì²´ì¸ ì¤íìë¦¬ì¤í¸ ìì±ê³¼ì </td>
 							<td>2018.09.01</td>
 							<td>2019.02.28</td>
 							<td>IITP</td>
@@ -554,7 +557,7 @@
   window.onload = function () {
       var elm = ".services-section";
       $(elm).each(function (index) {
-          // 개별적으로 Wheel 이벤트 적용
+          // ê°ë³ì ì¼ë¡ Wheel ì´ë²¤í¸ ì ì©
           $(this).on("mousewheel DOMMouseScroll", function (e) {
               e.preventDefault();
               var delta = 0;
@@ -567,14 +570,14 @@
                   delta = -event.detail / 3;
               var moveTop = $(window).scrollTop();
               var elmSelecter = $(elm).eq(index);
-              // 마우스휠을 위에서 아래로
+              // ë§ì°ì¤í ì ììì ìëë¡
               if (delta < 0) {
                   if ($(elmSelecter).next() != undefined) {
                       try{
                           moveTop = $(elmSelecter).next().offset().top;
                       }catch(e){}
                   }
-              // 마우스휠을 아래에서 위로
+              // ë§ì°ì¤í ì ìëìì ìë¡
               } else {
                   if ($(elmSelecter).prev() != undefined) {
                       try{
@@ -583,7 +586,7 @@
                   }
               }
                
-              // 화면 이동 0.8초(800)
+              // íë©´ ì´ë 0.8ì´(800)
               $("html,body").stop().animate({
                   scrollTop: moveTop + 'px'
               }, {

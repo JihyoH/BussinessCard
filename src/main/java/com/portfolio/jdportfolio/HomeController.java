@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Handles requests for the application home page.
@@ -22,7 +24,7 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
@@ -34,6 +36,40 @@ public class HomeController {
 		model.addAttribute("serverTime", formattedDate );
 		
 		return "home";
+	}*/
+	@RequestMapping(value = "/index", method = RequestMethod.GET)
+	public String index(Locale locale, Model model) {
+		
+		return "index";
+	}
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String bussinesCard(Locale locale, Model model) {
+		
+		return "bussines_card";
+	}
+	@RequestMapping(value = "/profile", method = RequestMethod.GET)
+	public String profile(Locale locale, Model model) {
+		
+		return "profile";
+	}
+	@RequestMapping(value = "/subpage", method = RequestMethod.GET)
+	public ModelAndView subpage(@RequestParam String developer,  Model model) {
+		ModelAndView mv = null;
+		
+		if(developer == "Joeh") {
+			mv.setViewName("subpage");
+		}else if(developer == "Dong") {
+			mv.setViewName("profile");
+		}
+		
+		System.out.println(developer);
+		
+		return mv;
+	}
+	@RequestMapping(value = "/resume", method = RequestMethod.POST)
+	public String resume(Locale locale, Model model) {
+		
+		return "resume";
 	}
 	
 }

@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
@@ -189,18 +192,18 @@
 			border-top:1px solid #8d8d8d;
 			top:-8px;
 		}
-		.filp_c:nth-child(1):nth-child(1):before{
+		.filp_c:nth-child(1):nth-child(1)::before{
 			right:-20px;
 		}
 		
-		.filp_c:nth-child(1):nth-child(1):after{
+		.filp_c:nth-child(1):nth-child(1)::after{
 			right:0px;
 		}
 
-		.filp_c:nth-child(1):nth-child(1):before{
+		.filp_c:nth-child(1):nth-child(1)::before{
 		  transform:translate(-50%,-50%) rotate(-45deg)
 		}
-		.filp_c:nth-child(1):nth-child(1):after{
+		.filp_c:nth-child(1):nth-child(1)::after{
 		  transform:translate(-50%,-50%) rotate(45deg)
 		}
 	</style>
@@ -296,12 +299,17 @@
 
 <script>
 $(".click_box").click(function(){
-	var parent_b = $(this).parent(".b_card");
+	/*var parent_b = $(this).parent(".b_card");
 
 	var tag_list = $(parent_b).children();
 	for(i=0; i<tag_list.length; i++){
 		$(tag_list[i]).fadeToggle('slow');
-	}
+	}*/
+
+	var developer = $($(this).parents(".b_card")[0]).attr('id');
+	console.log(developer);
+	location.href = "subpage.html?developer="+developer;
+
 });
 
 //
@@ -321,10 +329,11 @@ $(".b_card").hover(function(){
 });
 
 // 상세페이지 이동
-$(".flip").click(function(){
+$(".skill").click(function(){
 
-	var developer = $(this).attr('id');
-//	location.href = "subpage.html?developer="+developer;
+	var developer = $($(this).parents(".b_card")[0]).attr('id');
+	console.log(developer);
+	location.href = "subpage?developer="+developer;
 });
 
 $(".filp_c").click(function(){
