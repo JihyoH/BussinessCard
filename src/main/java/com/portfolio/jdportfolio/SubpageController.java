@@ -32,8 +32,9 @@ public class SubpageController {
 
 		return "subpage/Joeh";
 	}
-	@RequestMapping(value = "/resume", method = RequestMethod.POST)
+	@RequestMapping(value = "/resume", method = RequestMethod.POST) // get방식으로 접근 불가: url 직접입력으로도 접근 불가.
 	public String resume(Locale locale, Model model) {
+		System.out.println("subpage/resume");
 		
 		return "subpage/resume";
 	}
