@@ -308,7 +308,7 @@ $(".click_box").click(function(){
 
 	var developer = $($(this).parents(".b_card")[0]).attr('id');
 	console.log(developer);
-	location.href = "subpage.html?developer="+developer;
+	location.href = "subpage/"+developer;//+developer;
 
 });
 
@@ -333,7 +333,7 @@ $(".skill").click(function(){
 
 	var developer = $($(this).parents(".b_card")[0]).attr('id');
 	console.log(developer);
-	location.href = "subpage?developer="+developer;
+	location.href = "subpage";//?developer="+developer;
 });
 
 $(".filp_c").click(function(){

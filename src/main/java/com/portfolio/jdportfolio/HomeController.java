@@ -47,29 +47,4 @@ public class HomeController {
 		
 		return "bussines_card";
 	}
-	@RequestMapping(value = "/profile", method = RequestMethod.GET)
-	public String profile(Locale locale, Model model) {
-		
-		return "profile";
-	}
-	@RequestMapping(value = "/subpage", method = RequestMethod.GET)
-	public ModelAndView subpage(@RequestParam String developer,  Model model) {
-		ModelAndView mv = null;
-		
-		if(developer == "Joeh") {
-			mv.setViewName("subpage");
-		}else if(developer == "Dong") {
-			mv.setViewName("profile");
-		}
-		
-		System.out.println(developer);
-		
-		return mv;
-	}
-	@RequestMapping(value = "/resume", method = RequestMethod.POST)
-	public String resume(Locale locale, Model model) {
-		
-		return "resume";
-	}
-	
 }
