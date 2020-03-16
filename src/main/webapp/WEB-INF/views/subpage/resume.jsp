@@ -40,5 +40,5 @@
 	<ul>
 </div>
 
-<div id="p_web" class="small_font">내용을 준비증입니다.</div>
-<div id="p_and" class="small_font">내용을 준비증입니다.</div>
+<div id="p_web" class="small_font">내용을 준비중입니다.</div>
+<div id="p_and" class="small_font">내용을 준비중입니다.</div>
