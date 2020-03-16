@@ -22,19 +22,15 @@ public class SubpageController {
 	
 	@RequestMapping(value = "/Dong", method = RequestMethod.GET)
 	public String profile(Locale locale, Model model) {
-		
+		System.out.println("subpage/profile");
+
 		return "subpage/profile";
 	}
 	@RequestMapping(value = "/Joeh", method = RequestMethod.GET)
-	public ModelAndView subpage(@RequestParam String developer,  Model model) {
-		System.out.println("/Joeh");
-		ModelAndView mv = new ModelAndView();
-		
-		mv.setViewName("subpage/Joeh");
-		
-		System.out.println(mv);
-		
-		return mv;
+	public String joeh(Locale locale, Model model) {
+		System.out.println("subpage/Joeh");
+
+		return "subpage/Joeh";
 	}
 	@RequestMapping(value = "/resume", method = RequestMethod.POST)
 	public String resume(Locale locale, Model model) {
